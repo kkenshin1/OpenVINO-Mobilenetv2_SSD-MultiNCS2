@@ -56,7 +56,7 @@ $ sudo python3 /opt/intel/openvino/deployment_tools/tools/calibration_tool/calib
 ```
 Here is the Low-Precision 8-bit Integer Inference Workflow
 
-![image](https://github.com/kkenshin1/OpenVINO-Mobilenetv2_ssd-multiNCS2/blob/main/imgs/cpu_int8_flow.png)
+![image](https://github.com/kkenshin1/OpenVINO-Mobilenetv2_ssd-multiNCS2/blob/main/imgs/cpu_int8_flow.png)<br><br>
 
 ## Single CPU/NCS2 Inference
 
