@@ -42,6 +42,8 @@ We can run calibrate.py script in simplified mode to generate the INT8 IR file.
 
 This project uses FP16 IR file as input of this script.
 
+In OpenVINO 2019_R3.1, only cpu can run in low precision inference.
+
 ```bash
 $ cd OpenVINO-Mobilenetv2_ssd-multiNCS2
 $ sudo python3 /opt/intel/openvino/deployment_tools/tools/calibration_tool/calibrate.py \
@@ -52,3 +54,5 @@ $ sudo python3 /opt/intel/openvino/deployment_tools/tools/calibration_tool/calib
 -td CPU \
 --output_dir ./lrmodels/INT8
 ```
+Here is the Low-Precision 8-bit Integer Inference Workflow
+![image](https://github.com/kkenshin1/OpenVINO-Mobilenetv2_ssd-multiNCS2/blob/main/imgs/cpu_int8_flow.png)
