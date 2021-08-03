@@ -3,7 +3,7 @@ place your downloaded tensorflow pbmodels here
 
 eg. my pbmodels
 ```bash
-pbmodels$ tree -a
+$ tree -a
 .
 ├── checkpoint
 ├── frozen_inference_graph.pb
