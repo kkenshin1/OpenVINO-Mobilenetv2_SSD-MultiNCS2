@@ -55,4 +55,26 @@ $ sudo python3 /opt/intel/openvino/deployment_tools/tools/calibration_tool/calib
 --output_dir ./lrmodels/INT8
 ```
 Here is the Low-Precision 8-bit Integer Inference Workflow
+
 ![image](https://github.com/kkenshin1/OpenVINO-Mobilenetv2_ssd-multiNCS2/blob/main/imgs/cpu_int8_flow.png)
+
+## Single CPU/NCS2 Inference
+
+
+
+## Precision Evaluation
+
+
+## Multi-NCS2 Parallel Inference
+
+
+## Multi-NCS2 Parallel Inference Optimization
+
+
+## Experimental Results
+### Precision and Single-stick Speed
+
+### Multi-NCS2 Inference Speed
+
+
+## Reference
