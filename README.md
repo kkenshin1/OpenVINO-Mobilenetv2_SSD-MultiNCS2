@@ -1,6 +1,7 @@
 # OpenVINO-Mobilenetv2_ssd-multiNCS2
 OpenVINO 2019_R3.1 + MobileNetV2-SSD + Intel CPU/multi-NCS2 +USB_camera 
 
+
 ## Overview
 Based on OpenVINO, this project implement the model optimization and inference acceleration of MobileNetV2-SSD. This project uses the model optimizer and calibration tool to achieve the FP16/FP32
 compression and INT8 quantization of the algorithm, and evaluates the overall accuracy of the
@@ -8,10 +9,12 @@ model on the COCO dataset. Moreover, we propose a multi-accelerator parallel acc
 
 This project is inspired by [PINTO0309/MobileNet-SSD-RealSense](https://github.com/PINTO0309/MobileNet-SSD-RealSense) and optimize for his multi-stick code.
 
+
 ## Download Model
 You can download Tensorflow MobileNetV2-SSD Model [here](download.tensorflow.org/models/object_detection/ssd_mobilenet_v2_coco_2018_03_29.tar.gz) and place the pbmodels in the &lt;pbmodels/&gt; floder.
 
 [OpenVINO Model Optimizer Website](https://docs.openvinotoolkit.org/2019_R3.1/_docs_MO_DG_prepare_model_convert_model_Convert_Model_From_TensorFlow.html) also provides lots of pre-trained models.
+
 
 ## Model Optimization
 ### FP16/FP32
