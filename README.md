@@ -59,16 +59,16 @@ Here is the Low-Precision 8-bit Integer Inference Workflow
 ![image](https://github.com/kkenshin1/OpenVINO-Mobilenetv2_SSD-MultiNCS2/blob/main/imgs/cpu_int8_flow.png)<br><br>
 
 ## Single CPU/NCS2 Inference
-You can run `opencv_dnn_ssd.py` or `openvino_singlestick_sync.py` script to implement the inference of MobileNetV2-SSD on single CPU/NCS2. You can also choose different precision format of model.
+You can run `opencv_dnn_ssd.py` or `openvino_singlestick_sync.py` script to implement the inference of MobileNetV2-SSD on single CPU/NCS2 with or without OpenVINO. You can also choose different precision format of model.
 
-You should generate .pbtxt file before run `opencv_dnn_ssd.py` script.
+You should generate .pbtxt file before run `opencv_dnn_ssd.py` script.(without OpenVINO)
 
 ```bash
 $ cd OpenVINO-Mobilenetv2_SSD-MultiNCS2
 $ python3 opencv_dnn_ssd.py -c USB_camera
 ```
 
-You should generate IR file before run `openvino_singlestick_sync.py` script.
+You should generate IR file before run `openvino_singlestick_sync.py` script.(with OpenVINO)
 
 ```bash
 $ cd OpenVINO-Mobilenetv2_SSD-MultiNCS2
@@ -90,9 +90,7 @@ optional arguments:
 
 $ python3 openvino_singlestick_sync.py -d CPU -c USB_camera -p FP16
 ```
-<br><br>
-
-
+<br>
 
 ## Precision Evaluation
 
