@@ -1,4 +1,4 @@
-# OpenVINO-Mobilenetv2_ssd-multiNCS2
+# OpenVINO-Mobilenetv2_SSD-MultiNCS2
 OpenVINO 2019_R3.1 + MobileNetV2-SSD + Intel CPU/multi-NCS2 +USB_camera<br><br>
 
 ## Overview
@@ -17,7 +17,7 @@ You can download Tensorflow MobileNetV2-SSD Model [here](download.tensorflow.org
 ### FP16/FP32
 Run mo.py script to generate the FP16/FP32 IR file
 ```bash
-$ cd OpenVINO-Mobilenetv2_ssd-multiNCS2
+$ cd OpenVINO-Mobilenetv2_SSD-MultiNCS2
 $ sudo python3 /opt/intel/openvino/deployment_tools/model_optimizer/mo.py \
 --input_model ./pbmodels/frozen_inference_graph.pb \
 --tensorflow_use_custom_operations_config /opt/intel/openvino/deployment_tools/model_optimizer/extensions/front/tf/ssd_v2_support.json\
@@ -27,7 +27,7 @@ $ sudo python3 /opt/intel/openvino/deployment_tools/model_optimizer/mo.py \
 ```
 or
 ```bash
-$ cd OpenVINO-Mobilenetv2_ssd-multiNCS2
+$ cd OpenVINO-Mobilenetv2_SSD-MultiNCS2
 $ sudo python3 /opt/intel/openvino/deployment_tools/model_optimizer/mo.py \
 --input_model ./pbmodels/frozen_inference_graph.pb \
 --tensorflow_use_custom_operations_config /opt/intel/openvino/deployment_tools/model_optimizer/extensions/front/tf/ssd_v2_support.json\
@@ -45,7 +45,7 @@ This project uses FP16 IR file as input of this script.
 In OpenVINO 2019_R3.1, only cpu can run in low precision inference.
 
 ```bash
-$ cd OpenVINO-Mobilenetv2_ssd-multiNCS2
+$ cd OpenVINO-Mobilenetv2_SSD-MultiNCS2
 $ sudo python3 /opt/intel/openvino/deployment_tools/tools/calibration_tool/calibrate.py \
 -sm \
 -m ./lrmodels/FP16/frozen_inference_graph.xml \
@@ -56,9 +56,41 @@ $ sudo python3 /opt/intel/openvino/deployment_tools/tools/calibration_tool/calib
 ```
 Here is the Low-Precision 8-bit Integer Inference Workflow
 
-![image](https://github.com/kkenshin1/OpenVINO-Mobilenetv2_ssd-multiNCS2/blob/main/imgs/cpu_int8_flow.png)<br><br>
+![image](https://github.com/kkenshin1/OpenVINO-Mobilenetv2_SSD-MultiNCS2/blob/main/imgs/cpu_int8_flow.png)<br><br>
 
 ## Single CPU/NCS2 Inference
+You can run `opencv_dnn_ssd.py` or `openvino_singlestick_sync.py` script to implement the inference of MobileNetV2-SSD on single CPU/NCS2. You can also choose different precision format of model.
+
+You should generate .pbtxt file before run `opencv_dnn_ssd.py` script.
+
+You should generate IR file before run `openvino_singlestick_sync.py` script.
+
+```bash
+$ cd OpenVINO-Mobilenetv2_SSD-MultiNCS2
+$ python3 opencv_dnn_ssd.py -c USB_camera
+```
+
+```bash
+$ cd OpenVINO-Mobilenetv2_SSD-MultiNCS2
+$ python3 openvino_singlestick_sync.py -h
+usage: openvino_singlestick_sync.py [-h] [-d DEVICE] [-c CAMERA]
+                                    [-p PRECISION]
+optional arguments:
+  -h, --help    show this help message and exit
+  -d, --device
+                Specify the target device to infer on; CPU or MYRIAD
+                is acceptable. Sample will look for a suitable plugin
+                for device specified (CPU by default)
+  -c, --camera
+                Shooting equipment;USB_camera or laptop_camera(laptop
+                by default)
+  -p, --precision
+                Model Precision; FP32 or FP16 or INT8 (FP16 by
+                default)
+
+$ python3 openvino_singlestick_sync.py -d CPU -c USB_camera -p FP16
+```
+<br><br>
 
 
 
