@@ -63,12 +63,12 @@ You can run `opencv_dnn_ssd.py` or `openvino_singlestick_sync.py` script to impl
 
 You should generate .pbtxt file before run `opencv_dnn_ssd.py` script.
 
-You should generate IR file before run `openvino_singlestick_sync.py` script.
-
 ```bash
 $ cd OpenVINO-Mobilenetv2_SSD-MultiNCS2
 $ python3 opencv_dnn_ssd.py -c USB_camera
 ```
+
+You should generate IR file before run `openvino_singlestick_sync.py` script.
 
 ```bash
 $ cd OpenVINO-Mobilenetv2_SSD-MultiNCS2
