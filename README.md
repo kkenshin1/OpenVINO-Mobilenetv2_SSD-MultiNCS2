@@ -93,7 +93,7 @@ $ python3 openvino_singlestick_sync.py -d CPU -c USB_camera -p FP16
 
 Here is OpenVINO inference engine workflow.
 ![image](https://github.com/kkenshin1/OpenVINO-Mobilenetv2_SSD-MultiNCS2/blob/main/imgs/3.png)
-<br>
+<br><br>
 
 ## Precision Evaluation
 You can run `COCO_OpenVINO_testresult.py` or `COCO_noOpenVINO_testresult.py` script to generate object detection results for different precision models and different hardware devices on COCO dataset. (all results are .json file)
@@ -180,11 +180,15 @@ This project select the first 200 images of the COCO 2017 validation dataset for
 This project test inference speed on different single devices and different precision format models.
 
 Item|Precision(mAP)|Speed(FPS)
-:-|:-|:-|
+:-:|:-:|:-:|
 CPU | 29.7% | 33.18
 CPU + FP16 | 22.8% | 79.11
-CPU + INT8 | 22.1% | 129.42
+CPU + INT8 | 22.1% | 129.42 
 NCS2 + FP16 | 23.0% | 15.03
+<br>
+
+![image](https://github.com/kkenshin1/OpenVINO-Mobilenetv2_SSD-MultiNCS2/blob/main/imgs/7.png)
+<br><br>
 
 
 ### Multi-NCS2 Inference Speed
