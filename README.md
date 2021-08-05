@@ -150,6 +150,19 @@ This project propose an optimized multi-stick scheduling scheme. We can create a
 Here are optimized multi-NCS2s workflow.
 ![image](https://github.com/kkenshin1/OpenVINO-Mobilenetv2_SSD-MultiNCS2/blob/main/imgs/4.png)
 ![image](https://github.com/kkenshin1/OpenVINO-Mobilenetv2_SSD-MultiNCS2/blob/main/imgs/5.PNG)
+
+We use mutex to ensure the synchronization between multiple threads.
+
+You can execute the following command.
+```bash
+# You can modify CMakeLists.txt to build different files.
+$ cd OpenVINO-Mobilenetv2_SSD-MultiNCS2/multi-sticks optimization
+$ mkdir build && cd build
+$ cmake ..
+$ make
+$ cd ../output/
+$ ./multi_stick_and_thread_3req
+```
 <br><br>
 
 ## Experimental Results
