@@ -126,7 +126,23 @@ Here are COCO dataset object detection evaluation index and .json file result fo
 ![image](https://github.com/kkenshin1/OpenVINO-Mobilenetv2_SSD-MultiNCS2/blob/main/imgs/screenshot.PNG)<br><br>
 
 ## Multi-NCS2 Parallel Inference
+By using openvino IE api, we know that each Nearul Compute Stick 2 can support 4 inference requests. So, we can inference multi-images in one NCS2. Moreover, OpenVINO provide multi-device plugin to load multiple devices, so we can use multiple NCS2s and multiple inference requests to accelerate model inference.
 
+In multi-NCS2 inference in parallel, this project follow by PINTO0309/MobileNet-SSD-RealSense. We use Python multiprocessing library to create two processes and a queue. One process reads camera image and puts it into process queue, the other read images from queue and execute asynchronous inference.
+
+Multiprocessing's workflow as below.
+![image](https://github.com/kkenshin1/OpenVINO-Mobilenetv2_SSD-MultiNCS2/blob/main/imgs/1.png)
+
+In inference process, we use asynchronous inference api and put requests id into heapq to guarantee the order of the results. Each inference uses idle request id.
+![image](https://github.com/kkenshin1/OpenVINO-Mobilenetv2_SSD-MultiNCS2/blob/main/imgs/2.png)
+
+```bash
+$ cd OpenVINO-Mobilenetv2_SSD-MultiNCS2
+$ python3 openvino_multistick_accelerate.py
+```
+
+**Attention**: your USB camera should achieve 60FPS. If not, it is hard to take advantage of multi-NCS2s.
+<br><br>
 
 ## Multi-NCS2 Parallel Inference Optimization
 
