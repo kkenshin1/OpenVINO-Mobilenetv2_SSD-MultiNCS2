@@ -140,17 +140,22 @@ In inference process, we use asynchronous inference api and put requests id into
 $ cd OpenVINO-Mobilenetv2_SSD-MultiNCS2
 $ python3 openvino_multistick_accelerate.py
 ```
-
-**Attention**: your USB camera should achieve 60FPS. If not, it is hard to take advantage of multi-NCS2s.
 <br><br>
 
 ## Multi-NCS2 Parallel Inference Optimization
+The Multi-Device plugin automatically assigns inference requests to available computational devices to execute the requests in parallel. But each device is hard to work independently.
 
+This project propose an optimized multi-stick scheduling scheme. We can create a thread for each device and do not use multi-device plugin. Then, each device can work independently. In each device thread, we can create multiple inference requests to inference in parallel.
+
+Here are optimized multi-NCS2s workflow.
+![image](https://github.com/kkenshin1/OpenVINO-Mobilenetv2_SSD-MultiNCS2/blob/main/imgs/4.png)
+![image](https://github.com/kkenshin1/OpenVINO-Mobilenetv2_SSD-MultiNCS2/blob/main/imgs/5.PNG)
+<br><br>
 
 ## Experimental Results
 ### Precision and Single-stick Speed
 
 ### Multi-NCS2 Inference Speed
 
-
+**Attention**: your USB camera should achieve 60FPS. If not, it is hard to take advantage of multi-NCS2s.
 ## Reference
