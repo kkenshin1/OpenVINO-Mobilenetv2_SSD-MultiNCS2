@@ -151,6 +151,8 @@ Here are optimized multi-NCS2s workflow.
 ![image](https://github.com/kkenshin1/OpenVINO-Mobilenetv2_SSD-MultiNCS2/blob/main/imgs/4.png)
 ![image](https://github.com/kkenshin1/OpenVINO-Mobilenetv2_SSD-MultiNCS2/blob/main/imgs/5.PNG)
 
+Due to the existence of the global interpretation lock(Python GIL), we use C++ to implement optimized code.
+
 We use mutex to ensure the synchronization between multiple threads.
 
 You can execute the following command.
@@ -166,6 +168,11 @@ $ ./multi_stick_and_thread_3req
 <br><br>
 
 ## Experimental Results
+### Environment
+**Software:** Ubuntu 18.04 LTS, OpenVINO 2019_R3.1, Tensorflow 1.14, OpenCV 4.1.2, Python 3.6.
+**Hardware:** Intel Core i7-10710U CPU, Intel Nearul Compute Stick 2 *3, Logitech C925e USB camera.
+![image](https://github.com/kkenshin1/OpenVINO-Mobilenetv2_SSD-MultiNCS2/blob/main/imgs/6.jpg)
+
 ### Precision and Single-stick Speed
 
 ### Multi-NCS2 Inference Speed
