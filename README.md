@@ -1,6 +1,13 @@
 # OpenVINO-Mobilenetv2_SSD-MultiNCS2
 OpenVINO 2019_R3.1 + MobileNetV2-SSD + Intel CPU/multi-NCS2 +USB_camera<br><br>
 
+## Table of contents
+**1. [Overview](#Overview)**  
+　**1.1 [Verification environment NCSDK (1)](#verification-environment-1)**  
+　**1.2 [Result of detection rate NCSDK (1)](#result-of-detection-rate-1)**  
+　**1.3 [Verification environment NCSDK (2)](#verification-environment-2)**  
+　**1.4 [Result of detection rate NCSDK (2)](#result-of-detection-rate-2)**  
+
 ## Overview
 Based on OpenVINO, this project implement the model optimization and inference acceleration of MobileNetV2-SSD. This project uses the model optimizer and calibration tool to achieve the FP16/FP32
 compression and INT8 quantization of the algorithm, and evaluates the overall accuracy of the
@@ -194,7 +201,7 @@ NCS2 + FP16 | 23.0% | 15.03
 ### Multi-NCS2 Inference Speed
 **Attention**: your USB camera should achieve 60FPS. If not, it is hard to take advantage of multi-NCS2s.
 
-The "*" in the table below indicates that the maximum frame rate (60 FPS) is reached, so we can't measure the real performance.
+The "*" in the table below indicates that the maximum frame rate (65 FPS actually) is reached, so we can't measure the real performance.
 
 + **Before optimization(Python)**
 
@@ -202,7 +209,7 @@ Stick count | Each stick 1 ie_req | Each stick 2 ie_reqs |Each stick 3 ie_reqs |
 :-:|:-:|:-:|:-:|:-:
 1 stick|12FPS|22FPS|29FPS|30FPS|
 2 sticks|21FPS|30FPS|42FPS|52FPS|
-3 sticks|29FPS|43FPS|59FPS|60FPS<sup>*</sup>
+3 sticks|29FPS|43FPS|59FPS|65FPS<sup>*</sup>
 
 <br>
 
@@ -212,8 +219,10 @@ Stick count | Each stick 1 ie_req | Each stick 2 ie_reqs |Each stick 3 ie_reqs |
 :-:|:-:|:-:|:-:|:-:
 1 stick|15FPS|25FPS|27FPS|29FPS|
 2 sticks|33FPS|53FPS|59FPS|62FPS|
-3 sticks|50FPS|60FPS<sup>\*</sup>|60FPS<sup>\*</sup>|60FPS<sup>\*</sup>
+3 sticks|50FPS|65FPS<sup>\*</sup>|65FPS<sup>\*</sup>|65FPS<sup>\*</sup>
 
 <br><br>
 
 ## Reference
+
+
