@@ -3,10 +3,23 @@ OpenVINO 2019_R3.1 + MobileNetV2-SSD + Intel CPU/multi-NCS2 +USB_camera<br><br>
 
 ## Table of contents
 **1. [Overview](#Overview)**  
-　**1.1 [Verification environment NCSDK (1)](#verification-environment-1)**  
-　**1.2 [Result of detection rate NCSDK (1)](#result-of-detection-rate-1)**  
-　**1.3 [Verification environment NCSDK (2)](#verification-environment-2)**  
-　**1.4 [Result of detection rate NCSDK (2)](#result-of-detection-rate-2)**  
+**2. [Download Model](#Download-Model)**  
+**3. [Model Optimization](#Model-Optimization)**  
+  **3.1 [FP16/FP32](#FP16/FP32)**  
+  **3.2 [INT8](#INT8)**  
+**4. [Single CPU/NCS2 Inference](#Single-CPU/NCS2-Inference)**  
+**5. [Precision Evaluation](#Precision-Evaluation)**  
+**6. [Multi-NCS2 Parallel Inference](#Multi-NCS2-Parallel-Inference)**  
+**7. [Multi-NCS2 Parallel Inference Optimization](#Multi-NCS2-Parallel-Inference-Optimization)**  
+**8. [Experiment Results](#Experiment-Results)**  
+  **8.1 [Environment](#Environment)**  
+  **8.2 [Precision and Single-stick Speed](#Precision-and-Single-stick-Speed)**  
+  **8.3 [Multi-NCS2 Inference Speed](#Multi-NCS2-Inference-Speed)**  
+**9. [Reference](#Reference)** 
+
+
+
+
 
 ## Overview
 Based on OpenVINO, this project implement the model optimization and inference acceleration of MobileNetV2-SSD. This project uses the model optimizer and calibration tool to achieve the FP16/FP32
@@ -174,7 +187,7 @@ $ ./multi_stick_and_thread_3req
 ```
 <br><br>
 
-## Experimental Results
+## Experiment Results
 ### Environment
 **Software:** Ubuntu 18.04 LTS, OpenVINO 2019_R3.1, Tensorflow 1.14, OpenCV 4.1.2, Python 3.6.
 
