@@ -93,6 +93,33 @@ $ python3 openvino_singlestick_sync.py -d CPU -c USB_camera -p FP16
 <br>
 
 ## Precision Evaluation
+You can run `COCO_OpenVINO_testresult.py` or `COCO_noOpenVINO_testresult.py` script to generate object detection results for different precision models and different hardware devices on COCO dataset. (all results are .json file)
+
+These scripts are based on [COCO API](https://github.com/cocodataset/cocoapi) and [COCO dataset](http://cocodataset.org/). You should install and download in advance.
+
+```bash
+#without openvino, evaluate pre-trained model accuracy
+$ cd OpenVINO-Mobilenetv2_SSD-MultiNCS2
+$ python3 COCO_noOpenVINO_testresult.py
+```
+or
+```bash
+#openvino + FP16/FP32/INT8 + CPU/NCS2, evaluate optimized model accuracy
+#can modify parameters in script to generate different results
+$ cd OpenVINO-Mobilenetv2_SSD-MultiNCS2
+$ python3 COCO_OpenVINO_testresult.py
+```
+
+Then you can run `COCO_evaluate.py` to evaluate the accuracy between the predicted result and the ground truth.
+
+```bash
+#can modify parameters in script to generate different results
+$ cd OpenVINO-Mobilenetv2_SSD-MultiNCS2
+$ python3 COCO_evaluate.py
+```
+<br>
+
+
 
 
 ## Multi-NCS2 Parallel Inference
