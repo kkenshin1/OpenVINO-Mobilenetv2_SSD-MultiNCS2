@@ -117,7 +117,10 @@ Then you can run `COCO_evaluate.py` to evaluate the accuracy between the predict
 $ cd OpenVINO-Mobilenetv2_SSD-MultiNCS2
 $ python3 COCO_evaluate.py
 ```
-<br>
+
+Here are COCO dataset object detection evaluation index and .json file result format.
+
+![image](https://github.com/kkenshin1/OpenVINO-Mobilenetv2_SSD-MultiNCS2/blob/main/imgs/screenshot.PNG)<br><br>
 
 
 
