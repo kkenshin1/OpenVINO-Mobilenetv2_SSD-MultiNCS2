@@ -194,25 +194,26 @@ NCS2 + FP16 | 23.0% | 15.03
 ### Multi-NCS2 Inference Speed
 **Attention**: your USB camera should achieve 60FPS. If not, it is hard to take advantage of multi-NCS2s.
 
-The "--" in the table below indicates that the maximum frame rate is reached, due to the maximum frame rate of camera is 60FPS.
+The "*" in the table below indicates that the maximum frame rate (60 FPS) is reached, so we can't measure the real performance.
 
-**Before optimization(Python)**
++ **Before optimization(Python)**
 
 Stick count | Each stick 1 ie_req | Each stick 2 ie_reqs |Each stick 3 ie_reqs |Each stick 4 ie_reqs
 :-:|:-:|:-:|:-:|:-:
-1 sticks|12FPS|22FPS|29FPS|30FPS|
+1 stick|12FPS|22FPS|29FPS|30FPS|
 2 sticks|21FPS|30FPS|42FPS|52FPS|
-3 sticks|29FPS|43FPS|59FPS|--
+3 sticks|29FPS|43FPS|59FPS|60FPS<sup>*</sup>
 
 <br>
 
-**After optimization(C++)**
++ **After optimization(C++)**
 
 Stick count | Each stick 1 ie_req | Each stick 2 ie_reqs |Each stick 3 ie_reqs |Each stick 4 ie_reqs
 :-:|:-:|:-:|:-:|:-:
-1 sticks|15FPS|25FPS|27FPS|29FPS|
+1 stick|15FPS|25FPS|27FPS|29FPS|
 2 sticks|33FPS|53FPS|59FPS|62FPS|
-3 sticks|50FPS|--|--|--
+3 sticks|50FPS|60FPS<sup>\*</sup>|60FPS<sup>\*</sup>|60FPS<sup>\*</sup>
+
 <br><br>
 
 ## Reference
