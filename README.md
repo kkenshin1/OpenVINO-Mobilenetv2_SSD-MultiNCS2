@@ -170,12 +170,23 @@ $ ./multi_stick_and_thread_3req
 ## Experimental Results
 ### Environment
 **Software:** Ubuntu 18.04 LTS, OpenVINO 2019_R3.1, Tensorflow 1.14, OpenCV 4.1.2, Python 3.6.
+
 **Hardware:** Intel Core i7-10710U CPU, Intel Nearul Compute Stick 2 *3, Logitech C925e USB camera.
 ![image](https://github.com/kkenshin1/OpenVINO-Mobilenetv2_SSD-MultiNCS2/blob/main/imgs/6.jpg)
 
 ### Precision and Single-stick Speed
+This project select the first 200 images of the COCO 2017 validation dataset for accuracy evaluation.
+
+This project test inference speed on different single devices and different precision format models.
+
+Item|Precision(mAP)|Speed(FPS)
+:-|:-|:-|
+CPU | 29.7% | 33.18
+CPU + FP16 | 22.8% | 79.11
+CPU + INT8 | 22.1% | 129.42
+NCS2 + FP16 | 23.0% | 15.03
+
 
 ### Multi-NCS2 Inference Speed
-
 **Attention**: your USB camera should achieve 60FPS. If not, it is hard to take advantage of multi-NCS2s.
 ## Reference
