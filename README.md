@@ -2,24 +2,21 @@
 OpenVINO 2019_R3.1 + MobileNetV2-SSD + Intel CPU/multi-NCS2 +USB_camera<br><br>
 
 ## Table of contents
-**1. [Overview](#Overview)**  
-**2. [Download Model](#Download-Model)**  
-**3. [Model Optimization](#Model-Optimization)**  
-  **3.1 [FP16/FP32](#FP16/FP32)**  
-  **3.2 [INT8](#INT8)**  
-**4. [Single CPU/NCS2 Inference](#Single-CPU/NCS2-Inference)**  
-**5. [Precision Evaluation](#Precision-Evaluation)**  
-**6. [Multi-NCS2 Parallel Inference](#Multi-NCS2-Parallel-Inference)**  
-**7. [Multi-NCS2 Parallel Inference Optimization](#Multi-NCS2-Parallel-Inference-Optimization)**  
-**8. [Experiment Results](#Experiment-Results)**  
-  **8.1 [Environment](#Environment)**  
-  **8.2 [Precision and Single-stick Speed](#Precision-and-Single-stick-Speed)**  
-  **8.3 [Multi-NCS2 Inference Speed](#Multi-NCS2-Inference-Speed)**  
-**9. [Reference](#Reference)** 
-
-
-
-
+* [Overview](#overview)
+* [Download Model](#download-model)
+* [Model Optimization](#model-optimization)
+  * [FP16/FP32](#fp16fp32)
+  * [INT8](#int8)
+* [Single CPU/NCS2 Inference](#single-cpuncs2-inference)
+* [Precision Evaluation](#precision-evaluation)
+* [Multi\-NCS2 Parallel Inference](#multi-ncs2-parallel-inference)
+* [Multi\-NCS2 Parallel Inference Optimization](#multi-ncs2-parallel-inference-optimization)
+* [Experiment Results](#experiment-results)
+  * [Environment](#environment)
+  * [Precision and Single\-stick Speed](#precision-and-single-stick-speed)
+  * [Multi\-NCS2 Inference Speed](#multi-ncs2-inference-speed)
+* [Reference](#reference)
+<br><br>
 
 ## Overview
 Based on OpenVINO, this project implement the model optimization and inference acceleration of MobileNetV2-SSD. This project uses the model optimizer and calibration tool to achieve the FP16/FP32
