@@ -234,12 +234,10 @@ Stick count | Each stick 1 ie_req | Each stick 2 ie_reqs |Each stick 3 ie_reqs |
 <br><br>
 
 ## Reference
+https://github.com/PINTO0309/MobileNet-SSD-RealSense  
+https://github.com/PINTO0309/OpenVINO-YoloV3  
+https://software.intel.com/content/www/us/en/develop/tools/openvino-toolkit.html  
 https://docs.openvinotoolkit.org/latest/openvino_docs_get_started_get_started_linux.html  
 https://docs.openvinotoolkit.org/2019_R3.1/_docs_MO_DG_Deep_Learning_Model_Optimizer_DevGuide.html  
 https://docs.openvinotoolkit.org/2019_R3.1/_docs_IE_DG_Deep_Learning_Inference_Engine_DevGuide.html  
 https://docs.openvinotoolkit.org/2019_R3.1/_docs_IE_DG_supported_plugins_MULTI.html  
-https://github.com/PINTO0309/MobileNet-SSD-RealSense  
-https://github.com/PINTO0309/OpenVINO-YoloV3  
-https://software.intel.com/content/www/us/en/develop/tools/openvino-toolkit.html  
-
-
