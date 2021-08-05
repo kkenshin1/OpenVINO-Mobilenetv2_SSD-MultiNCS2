@@ -90,6 +90,9 @@ optional arguments:
 
 $ python3 openvino_singlestick_sync.py -d CPU -c USB_camera -p FP16
 ```
+
+Here is OpenVINO inference engine workflow.
+![image](https://github.com/kkenshin1/OpenVINO-Mobilenetv2_SSD-MultiNCS2/blob/main/imgs/3.png)
 <br>
 
 ## Precision Evaluation
@@ -121,9 +124,6 @@ $ python3 COCO_evaluate.py
 Here are COCO dataset object detection evaluation index and .json file result format.
 
 ![image](https://github.com/kkenshin1/OpenVINO-Mobilenetv2_SSD-MultiNCS2/blob/main/imgs/screenshot.PNG)<br><br>
-
-
-
 
 ## Multi-NCS2 Parallel Inference
 
