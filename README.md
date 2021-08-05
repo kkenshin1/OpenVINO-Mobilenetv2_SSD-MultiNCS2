@@ -2,20 +2,20 @@
 OpenVINO 2019_R3.1 + MobileNetV2-SSD + Intel CPU/multi-NCS2 +USB_camera<br><br>
 
 ## Table of contents
-* [Overview](#overview)
-* [Download Model](#download-model)
-* [Model Optimization](#model-optimization)
-  * [FP16/FP32](#fp16fp32)
-  * [INT8](#int8)
-* [Single CPU/NCS2 Inference](#single-cpuncs2-inference)
-* [Precision Evaluation](#precision-evaluation)
-* [Multi\-NCS2 Parallel Inference](#multi-ncs2-parallel-inference)
-* [Multi\-NCS2 Parallel Inference Optimization](#multi-ncs2-parallel-inference-optimization)
-* [Experiment Results](#experiment-results)
-  * [Environment](#environment)
-  * [Precision and Single\-stick Speed](#precision-and-single-stick-speed)
-  * [Multi\-NCS2 Inference Speed](#multi-ncs2-inference-speed)
-* [Reference](#reference)
+* **[Overview](#overview)**
+* **[Download Model](#download-model)**
+* **[Model Optimization](#model-optimization)**
+  * **[FP16/FP32](#fp16fp32)**
+  * **[INT8](#int8)**
+* **[Single CPU/NCS2 Inference](#single-cpuncs2-inference)**
+* **[Precision Evaluation](#precision-evaluation)**
+* **[Multi\-NCS2 Parallel Inference](#multi-ncs2-parallel-inference)**
+* **[Multi\-NCS2 Parallel Inference Optimization](#multi-ncs2-parallel-inference-optimization)**
+* **[Experiment Results](#experiment-results)**
+  * **[Environment](#environment)**
+  * **[Precision and Single\-stick Speed](#precision-and-single-stick-speed)**
+  * **[Multi\-NCS2 Inference Speed](#multi-ncs2-inference-speed)**
+* **[Reference](#reference)**
 <br><br>
 
 ## Overview
@@ -234,5 +234,12 @@ Stick count | Each stick 1 ie_req | Each stick 2 ie_reqs |Each stick 3 ie_reqs |
 <br><br>
 
 ## Reference
+https://docs.openvinotoolkit.org/latest/openvino_docs_get_started_get_started_linux.html  
+https://docs.openvinotoolkit.org/2019_R3.1/_docs_MO_DG_Deep_Learning_Model_Optimizer_DevGuide.html  
+https://docs.openvinotoolkit.org/2019_R3.1/_docs_IE_DG_Deep_Learning_Inference_Engine_DevGuide.html  
+https://docs.openvinotoolkit.org/2019_R3.1/_docs_IE_DG_supported_plugins_MULTI.html  
+https://github.com/PINTO0309/MobileNet-SSD-RealSense  
+https://github.com/PINTO0309/OpenVINO-YoloV3  
+https://software.intel.com/content/www/us/en/develop/tools/openvino-toolkit.html  
 
 
