@@ -26,7 +26,7 @@ model on the COCO dataset. Moreover, we propose a multi-accelerator parallel acc
 This project is inspired by [PINTO0309/MobileNet-SSD-RealSense](https://github.com/PINTO0309/MobileNet-SSD-RealSense) and optimize for his multi-stick code.<br><br>
 
 ## Download Model
-You can download Tensorflow MobileNetV2-SSD Model [here](download.tensorflow.org/models/object_detection/ssd_mobilenet_v2_coco_2018_03_29.tar.gz) and place the pbmodels in the &lt;pbmodels/&gt; floder.
+You can download Tensorflow MobileNetV2-SSD Model [here](https://download.tensorflow.org/models/object_detection/ssd_mobilenet_v2_coco_2018_03_29.tar.gz) and place the pbmodels in the &lt;pbmodels/&gt; floder.
 
 [OpenVINO Model Optimizer Website](https://docs.openvinotoolkit.org/2019_R3.1/_docs_MO_DG_prepare_model_convert_model_Convert_Model_From_TensorFlow.html) also provides lots of pre-trained models.<br><br>
 
